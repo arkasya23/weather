@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="547.059" Width="1352.573">
+    <Grid Margin="0,0,3.4,-0.4" RenderTransformOrigin="0.84,0.453">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="1164*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="./Resources/wallpaper.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button Content="Check Weather" Margin="496.158,400,473.2,78" Click="Button_Click_1" Grid.Column="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,93,0,0" TextWrapping="Wrap" Text="Main Temp" VerticalAlignment="Top" Height="37" Width="169" Grid.ColumnSpan="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,150,0,0" TextWrapping="Wrap" Text="Clouds" VerticalAlignment="Top" Height="37" Width="169" Grid.ColumnSpan="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,192,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Height="37" Width="169" Grid.ColumnSpan="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,246,0,0" TextWrapping="Wrap" Text="Min Temp" VerticalAlignment="Top" Height="37" Width="169" Grid.ColumnSpan="4"/>
+        <TextBlock x:Name ="mainTemp" Text="{Binding Path=Name}" HorizontalAlignment="Left" Margin="99.158,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="169" Grid.Column="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,288,0,0" TextWrapping="Wrap" Text="Max Temp" VerticalAlignment="Top" Height="37" Width="169" RenderTransformOrigin="0.419,5.144" Grid.ColumnSpan="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,352,0,0" TextWrapping="Wrap" Text="Humidity" VerticalAlignment="Top" Height="37" Width="169" Grid.ColumnSpan="4"/>
+        <TextBlock x:Name ="clouds" Text="{Binding Path=Name}" HorizontalAlignment="Left" Margin="99.158,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="169" Grid.Column="3"/>
+        <TextBlock x:Name ="description" Text="{Binding Path=Name}" HorizontalAlignment="Left" Margin="99.158,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="169" Grid.Column="3"/>
+        <TextBlock x:Name ="minTemp" Text="{Binding Path=Name}" HorizontalAlignment="Left" Margin="99.158,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="169" Grid.Column="3"/>
+        <TextBlock x:Name ="maxTemp" Text="{Binding Path=Name}" HorizontalAlignment="Left" Margin="99.158,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="169" Grid.Column="3"/>
+        <TextBlock x:Name ="pressure" Text="{Binding Path=Name}" HorizontalAlignment="Left" Margin="99.158,403,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="169" Grid.Column="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,403,0,0" TextWrapping="Wrap" Text="Pressure" VerticalAlignment="Top" Height="37" Width="169" Grid.ColumnSpan="4"/>
+        <TextBlock x:Name ="humidity" Text="{Binding Path=Name}" HorizontalAlignment="Left" Margin="99.158,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="169" Grid.Column="3"/>
+        <TextBox x:Name ="countryy" Text="{Binding Path=Name}" HorizontalAlignment="Left" Height="23" Margin="571.158,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="3"/>
+        <TextBox x:Name ="cityy" Text="{Binding Path=Name}" HorizontalAlignment="Left" Height="23" Margin="571.158,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="3"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="424.158,34,0,0" TextWrapping="Wrap" Text="Country (2 letters)" VerticalAlignment="Top" Width="120" Grid.Column="3"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="424.158,79,0,0" TextWrapping="Wrap" Text="City (all letters)" VerticalAlignment="Top" Width="120" Grid.Column="3"/>
+        <Image x:Name="Image" Source="{Binding Path=Name}" Height="247" Width="532" Grid.Column="3" Margin="227.158,136,405.2,135"/>
+
+
+
+    </Grid>
+
+</Window>
